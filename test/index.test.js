@@ -1,4 +1,4 @@
-const sum = require('../src/index');
+const depositProfit = require('../src/index');
 
 /**
  * Test Suite
