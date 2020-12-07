@@ -1,2 +1,5 @@
-const sum = (a, b) => a + b;
-module.exports = sum;
+function depositProfit(deposit, rate, threshold) {
+  //  write code here.
+}
+
+module.exports = depositProfit;
