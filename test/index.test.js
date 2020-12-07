@@ -1,21 +1,34 @@
-const sum = require('../src/index');
+const centuryFromYear = require('../src/index');
 
 /**
  * Test Suite
  */
-describe('sum()', () => {
-  it('returns value to 2 numbers added together', () => {
+describe('centuryFromYear()', () => {
+  it('returns current century', () => {
     // arrange
-    const a = 3;
-    const b = 10;
+    const year = 1905;
 
     // act
-    const result = sum(a, b);
+    const result = centuryFromYear(year);
 
     // log
-    console.log('result: ', result);
+    console.log('result 1: ', result);
 
     // assert
-    expect(result).toBe(13);
+    expect(result).toBe(20);
+  });
+
+  it('returns current century for edge case of start of century', () => {
+    // arrange
+    const year = 1700;
+
+    // act
+    const result = centuryFromYear(year);
+
+    // log
+    console.log('result 2: ', result);
+
+    // assert
+    expect(result).toBe(17);
   });
 });
