@@ -1,21 +1,20 @@
-const sum = require('../src/index');
+const countVowelConsonant = require('../src/index');
 
 /**
  * Test Suite
  */
-describe('sum()', () => {
-  it('returns value to 2 numbers added together', () => {
+describe('countVowelConsonant()', () => {
+  it('returns total of vowels(1) and consonants(2) to be added', () => {
     // arrange
-    const a = 3;
-    const b = 10;
+    const value = 'abcde';
 
     // act
-    const result = sum(a, b);
+    const result = countVowelConsonant(value);
 
     // log
     console.log('result: ', result);
 
     // assert
-    expect(result).toBe(13);
+    expect(result).toBe(8);
   });
 });
