@@ -1,2 +1,4 @@
-const sum = (a, b) => a + b;
-module.exports = sum;
+function reverseAString(str) {
+  return str.split('').reverse().join('');
+}
+module.exports = reverseAString;
