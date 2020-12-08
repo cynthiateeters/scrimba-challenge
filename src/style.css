@@ -1,0 +1,83 @@
+body {
+  background-color: #aeb8fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  width: 20rem;
+  text-align: center;
+}
+
+.dice {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  background-color: #efe5dc;
+  margin: 100px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: black;
+  justify-self: center;
+}
+
+.grid-6 .dot:nth-of-type(2),
+.grid-6 .dot:nth-of-type(5),
+.grid-6 .dot:nth-of-type(8) {
+  visibility: hidden;
+}
+
+.grid-5 .dot:nth-of-type(2),
+.grid-5 .dot:nth-of-type(4),
+.grid-5 .dot:nth-of-type(6),
+.grid-5 .dot:nth-of-type(8) {
+  visibility: hidden;
+}
+
+.grid-4 .dot:nth-of-type(2),
+.grid-4 .dot:nth-of-type(4),
+.grid-4 .dot:nth-of-type(5),
+.grid-4 .dot:nth-of-type(6),
+.grid-4 .dot:nth-of-type(8) {
+  visibility: hidden;
+}
+
+.grid-3 .dot:nth-of-type(2),
+.grid-3 .dot:nth-of-type(3),
+.grid-3 .dot:nth-of-type(4),
+.grid-3 .dot:nth-of-type(6),
+.grid-3 .dot:nth-of-type(7),
+.grid-3 .dot:nth-of-type(8) {
+  visibility: hidden;
+}
+
+.grid-2 .dot:nth-of-type(2),
+.grid-2 .dot:nth-of-type(3),
+.grid-2 .dot:nth-of-type(4),
+.grid-2 .dot:nth-of-type(5),
+.grid-2 .dot:nth-of-type(6),
+.grid-2 .dot:nth-of-type(7),
+.grid-2 .dot:nth-of-type(8) {
+  visibility: hidden;
+}
+
+.grid-1 .dot:nth-of-type(1),
+.grid-1 .dot:nth-of-type(2),
+.grid-1 .dot:nth-of-type(3),
+.grid-1 .dot:nth-of-type(4),
+.grid-1 .dot:nth-of-type(6),
+.grid-1 .dot:nth-of-type(7),
+.grid-1 .dot:nth-of-type(8),
+.grid-1 .dot:nth-of-type(9) {
+  visibility: hidden;
+}

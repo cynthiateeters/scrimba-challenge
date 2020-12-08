@@ -3,7 +3,7 @@ const sum = require('../src/index');
 /**
  * Test Suite
  */
-describe('sum()', () => {
+/* describe('sum()', () => {
   it('returns value to 2 numbers added together', () => {
     // arrange
     const a = 3;
@@ -19,3 +19,4 @@ describe('sum()', () => {
     expect(result).toBe(13);
   });
 });
+ */
