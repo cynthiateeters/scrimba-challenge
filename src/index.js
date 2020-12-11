@@ -7,7 +7,6 @@ function avoidObstacles(nums) {
     test = !nums.every((num) => {
       return num % step;
     });
-    if (step > 1000) break;
   }
   return step;
 }
