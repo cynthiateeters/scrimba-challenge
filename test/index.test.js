@@ -1,21 +1,34 @@
-const sum = require('../src/index');
+const arrayMaximalAdjacentDifference = require('../src/index');
 
 /**
- * Test Suite
- */
-describe('sum()', () => {
-  it('returns value to 2 numbers added together', () => {
-    // arrange
-    const a = 3;
-    const b = 10;
+* Test Suite 
+*/
+describe('arrayMaximalAdjacentDifference()', () => {
+    it('returns largest difference between adjacent values', () => {
+        // arrange
+        const nums = [2, 4, 1, 0];
+        
+        // act
+        const result = arrayMaximalAdjacentDifference(nums);
 
-    // act
-    const result = sum(a, b);
+        // log
+        console.log("result 1: ", result);
+        
+        // assert
+        expect(result).toBe(3);
+    });
 
-    // log
-    console.log('result: ', result);
+    it('returns largest difference between adjacent values example 2', () => {
+        // arrange
+        const nums = [2, 9, 1, 0];
+        
+        // act
+        const result = arrayMaximalAdjacentDifference(nums);
 
-    // assert
-    expect(result).toBe(13);
-  });
+        // log
+        console.log("result 2: ", result);
+        
+        // assert
+        expect(result).toBe(8);
+    });
 });
