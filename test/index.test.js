@@ -1,21 +1,22 @@
-const sum = require('../src/index');
+const extractEachKth = require('../src/index');
+
 
 /**
- * Test Suite
- */
-describe('sum()', () => {
-  it('returns value to 2 numbers added together', () => {
-    // arrange
-    const a = 3;
-    const b = 10;
+* Test Suite 
+*/
+describe('extractEachKth()', () => {
+    it('returns largest positive integer possible for digit count', () => {
+        // arrange
+        const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const index = 3;
+        
+        // act
+        const result = extractEachKth(nums, index);
 
-    // act
-    const result = sum(a, b);
-
-    // log
-    console.log('result: ', result);
-
-    // assert
-    expect(result).toBe(13);
-  });
+        // log
+        console.log("result: ", result);
+        
+        // assert
+        expect(result).toEqual([1, 2, 4, 5, 7, 8, 10]);
+    });
 });
