@@ -1,21 +1,48 @@
-const sum = require('../src/index');
+const validTime = require('../src/index');
 
 /**
  * Test Suite
  */
-describe('sum()', () => {
-  it('returns value to 2 numbers added together', () => {
+describe('validTime()', () => {
+  it('returns true for valid time', () => {
     // arrange
-    const a = 3;
-    const b = 10;
+    const str = '13:58';
 
     // act
-    const result = sum(a, b);
+    const result = validTime(str);
 
     // log
-    console.log('result: ', result);
+    console.log('result 1: ', result);
 
     // assert
-    expect(result).toBe(13);
+    expect(result).toBe(true);
+  });
+
+  it('returns false when invalid hours', () => {
+    // arrange
+    const str = '25:51';
+
+    // act
+    const result = validTime(str);
+
+    // log
+    console.log('result 1: ', result);
+
+    // assert
+    expect(result).toBe(false);
+  });
+
+  it('returns false when invalid minutes', () => {
+    // arrange
+    const str = '02:76';
+
+    // act
+    const result = validTime(str);
+
+    // log
+    console.log('result 1: ', result);
+
+    // assert
+    expect(result).toBe(false);
   });
 });
