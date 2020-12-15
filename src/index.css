@@ -7,7 +7,11 @@ https://unsplash.com/photos/KBKHXjhVQVM
 https://unsplash.com/photos/PxM8aeJbzvk
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+	font-display: swap;
+}
 
 html,
 body {
