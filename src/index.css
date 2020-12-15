@@ -23,6 +23,12 @@ img {
 	width: 200px;
 }
 
+h1 {
+	font-size: 5rem;
+	color: rgb(206, 29, 29);
+	text-align: center;
+}
+
 .previous,
 .next {
 	width: 35px;
