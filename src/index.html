@@ -4,7 +4,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <meta name="Description" content="Solution of 2020 Christmas Scrimba challenge: JavaScript carousel.">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" media="screen" href="index.css">
     <title>Carousel</title>
   </head>
 
@@ -14,11 +16,31 @@
       <img src="previous.svg" class="previous" alt="previous image">
       <div class="gallery-wrapper">
         <div class="gallery">
-          <img class="card current" src="img/presents.jpeg" alt="Christmas Cookies">
-          <img class="card" src="img/cookies.jpeg" alt="Christmas Cookies">
-          <img class="card" src="img/santa.jpeg" alt="Christmas Cookies">
-          <img class="card" src="img/candycane.jpeg" alt="Christmas Cookies">
-          <img class="card" src="img/reindeer.jpeg" alt="Christmas Cookies">
+          <picture>
+            <source srcset="img/presents.jpeg.webp" type="image/webp">
+            <source srcset="img/presents.jpeg" type="image/jpeg">
+            <img class="card current" src="img/presents.jpeg" alt="Christmas Cookies">
+          </picture>
+          <picture>
+            <source srcset="img/cookies.jpeg.webp" type="image/webp">
+            <source srcset="img/cookies.jpeg" type="image/jpeg">
+            <img class="card current" src="img/cookies.jpeg" alt="Christmas Cookies">
+          </picture>
+          <picture>
+            <source srcset="img/santa.jpeg.webp" type="image/webp">
+            <source srcset="img/santa.jpeg" type="image/jpeg">
+            <img class="card current" src="img/santa.jpeg" alt="Christmas Cookies">
+          </picture>
+          <picture>
+            <source srcset="img/candycane.jpeg.webp" type="image/webp">
+            <source srcset="img/candycane.jpeg" type="image/jpeg">
+            <img class="card current" src="img/candycane.jpeg" alt="Christmas Cookies">
+          </picture>
+          <picture>
+            <source srcset="img/reindeer.jpeg.webp" type="image/webp">
+            <source srcset="img/reindeer.jpeg" type="image/jpeg">
+            <img class="card current" src="img/reindeer.jpeg" alt="Christmas Cookies">
+          </picture>
         </div>
       </div>
       <img src="next.svg" class="next" alt="next image">
