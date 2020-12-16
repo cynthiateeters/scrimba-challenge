@@ -1,2 +1,5 @@
-const sum = (a, b) => a + b;
-module.exports = sum;
+function insertDashes(arr) {
+  return arr.split(' ').map(string => [...string].join('-')).join(' ');
+}
+
+module.exports = insertDashes;
