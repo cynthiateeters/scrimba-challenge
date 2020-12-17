@@ -1,21 +1,36 @@
-const sum = require('../src/index');
+const differentSymbolsNaive = require('../src/index');
 
 /**
  * Test Suite
  */
-describe('sum()', () => {
-	it('returns value to 2 numbers added together', () => {
-		// arrange
-		const a = 3;
-		const b = 10;
+describe('differentSymbolsNaive() Simple', () => {
+  it('returns count of unique characters', () => {
+    // arrange
+    const str = 'cabca';
 
-		// act
-		const result = sum(a, b);
+    // act
+    const result = differentSymbolsNaive(str);
 
-		// log
-		console.log('result: ', result);
+    // log
+    console.log('result: ', result);
 
-		// assert
-		expect(result).toBe(13);
-	});
+    // assert
+    expect(result).toBe(3);
+  });
+});
+
+describe('differentSymbolsNaive() More Complex', () => {
+  it('returns count of unique characters', () => {
+    // arrange
+    const str = '¡§±±±Ğ±±ÆÆÆ';
+
+    // act
+    const result = differentSymbolsNaive(str);
+
+    // log
+    console.log('result: ', result);
+
+    // assert
+    expect(result).toBe(5);
+  });
 });
