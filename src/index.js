@@ -1,4 +1,13 @@
-const sum = (a, b) => a + b;
-const subtract = (a, b) => a - b;
+function arrayPreviousLess(nums) {
+  return nums.map((num, indx, nums) => {
+    let val = -1;
+    for (let i = 0; i < indx; i += 1) {
+      if (nums[i] < num) {
+        val = nums[i];
+      }
+    }
+    return val;
+  });
+}
 
-export { sum, subtract };
+export { arrayPreviousLess };
