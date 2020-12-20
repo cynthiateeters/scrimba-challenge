@@ -15,4 +15,4 @@ function alphabetSubsequence(str) {
   return arrayEquals(arr, distinctArr);
 }
 
-export { alphabetSubsequence };
+export { alphabetSubsequence, arrayEquals };
