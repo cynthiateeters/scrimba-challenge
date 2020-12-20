@@ -1,37 +1,48 @@
-import { sum, subtract } from "../src/index"; //using the ES6 modules
+import { alphabetSubsequence } from "../src/index"; //using the ES6 modules
 
 /**
  * Test Suite
  */
-describe("sum()", () => {
-  it("returns value to 2 numbers added together", () => {
+describe("alphabetSubsequence()", () => {
+  it("returns false when it has duplicate letters", () => {
     // arrange
-    const a = 3;
-    const b = 10;
+    const str = "effg";
 
     // act
-    const result = sum(a, b);
+    const result = alphabetSubsequence(str);
 
     // log
-    console.log("result: ", result);
+    console.log("result 1: ", result);
 
     // assert
-    expect(result).toBe(13);
+    expect(result).toBe(false);
   });
-});
-describe("subtract()", () => {
-  it("returns value of one number subtracted from other", () => {
+
+  it("returns false when NOT in ascending a - z order", () => {
     // arrange
-    const a = 13;
-    const b = 10;
+    const str = "cdce";
 
     // act
-    const result = subtract(a, b);
+    const result = alphabetSubsequence(str);
 
     // log
-    console.log("result: ", result);
+    console.log("result 2: ", result);
 
     // assert
-    expect(result).toBe(3);
+    expect(result).toBe(false);
+  });
+
+  it("returns true whenno duplicates and is ascending a - z order ", () => {
+    // arrange
+    const str = "ace";
+
+    // act
+    const result = alphabetSubsequence(str);
+
+    // log
+    console.log("result 3: ", result);
+
+    // assert
+    expect(result).toBe(true);
   });
 });
