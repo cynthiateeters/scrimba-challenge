@@ -1,4 +1,8 @@
-const sum = (a, b) => a + b;
-const subtract = (a, b) => a - b;
+function sumOfTwo(nums1, nums2, value) {
+  //  write code here.
+  return nums1.some((element) =>
+    nums2.some((element2) => element + element2 == value)
+  );
+}
 
-export { sum, subtract };
+export { sumOfTwo };

@@ -1,37 +1,42 @@
-import { sum, subtract } from "../src/index"; //using the ES6 modules
+import { sumOfTwo } from "../src/index"; //using the ES6 modules
 
 /**
  * Test Suite
  */
-describe("sum()", () => {
-  it("returns value to 2 numbers added together", () => {
+describe("sumOfTwo()", () => {
+  it("returns true if a value can be found that by adding one number from each list", () => {
     // arrange
-    const a = 3;
-    const b = 10;
+    const nums1 = [1, 2, 3];
+    const nums2 = [10, 20, 30, 40];
+    const value = 42;
 
     // act
-    const result = sum(a, b);
+    const result = sumOfTwo(nums1, nums2, value);
 
     // log
     console.log("result: ", result);
 
     // assert
-    expect(result).toBe(13);
+    expect(result).toBe(true);
   });
 });
-describe("subtract()", () => {
-  it("returns value of one number subtracted from other", () => {
+/**
+ * Test Suite
+ */
+describe("sumOfTwo()", () => {
+  it("returns true if a value can be found that by adding one number from each list", () => {
     // arrange
-    const a = 13;
-    const b = 10;
+    const nums1 = [1, 2, 3];
+    const nums2 = [10, 20, 30, 40];
+    const value = 42;
 
     // act
-    const result = subtract(a, b);
+    const result = sumOfTwo(nums1, nums2, value);
 
     // log
     console.log("result: ", result);
 
     // assert
-    expect(result).toBe(3);
+    expect(result).toBe(true);
   });
 });
