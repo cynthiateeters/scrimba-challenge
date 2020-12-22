@@ -1,4 +1,10 @@
-const sum = (a, b) => a + b;
-const subtract = (a, b) => a - b;
+function extractMatrixColumn(matrix, column) {
+  //  write code here.
+  const arr = [];
+  for (let i = 0; i < matrix.length; i += 1) {
+    arr.push(matrix[i][column]);
+  }
+  return arr;
+}
 
-export { sum, subtract };
+export { extractMatrixColumn };

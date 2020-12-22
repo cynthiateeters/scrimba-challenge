@@ -1,37 +1,25 @@
-import { sum, subtract } from "../src/index"; //using the ES6 modules
+import { extractMatrixColumn } from "../src/index"; //using the ES6 modules
 
 /**
  * Test Suite
  */
-describe("sum()", () => {
-  it("returns value to 2 numbers added together", () => {
+describe("extractMatrixColumn()", () => {
+  it("returns largest positive integer possible for digit count", () => {
     // arrange
-    const a = 3;
-    const b = 10;
+    const matrix = [
+      [1, 1, 1, 2],
+      [0, 5, 0, 4],
+      [2, 1, 3, 6],
+    ];
+    const column = 2;
 
     // act
-    const result = sum(a, b);
+    const result = extractMatrixColumn(matrix, column);
 
     // log
     console.log("result: ", result);
 
     // assert
-    expect(result).toBe(13);
-  });
-});
-describe("subtract()", () => {
-  it("returns value of one number subtracted from other", () => {
-    // arrange
-    const a = 13;
-    const b = 10;
-
-    // act
-    const result = subtract(a, b);
-
-    // log
-    console.log("result: ", result);
-
-    // assert
-    expect(result).toBe(3);
+    expect(result).toEqual([1, 0, 3]);
   });
 });
